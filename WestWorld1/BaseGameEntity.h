@@ -1,6 +1,10 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+//
+// class for game entity
+//
+
 class GameEntity
 {
 private:
