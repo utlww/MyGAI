@@ -1,21 +1,23 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#include <cassert>
 //
 // class for game entity
 //
 
-class GameEntity
+class BaseGameEntity
 {
 private:
     int m_ID;
     static int m_iNextValidID;
-
+    
     void SetID(int val);
 public:
-    GameEntity(int id) { SetID(id); }
+    BaseGameEntity(){ SetID(m_iNextValidID); }
+    BaseGameEntity(int id) { SetID(id); }
     
-    virtual ~GameEntity(){};
+    virtual ~BaseGameEntity(){};
     
     virtual void Update() =0;
 
